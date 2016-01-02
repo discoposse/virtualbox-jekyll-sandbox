@@ -9,5 +9,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     jekyllsandbox.vm.hostname = "jekyllsandbox"
     jekyllsandbox.vm.box = "trusty-server"
     jekyllsandbox.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
+    jekyllsandbox.vm.provision :shell, :path => "build.sh"
   end
 end
